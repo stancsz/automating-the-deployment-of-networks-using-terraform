@@ -24,3 +24,11 @@ allow {
     protocol = "icmp"
     }
 }
+
+# Add the managementnet-us-vm instance
+module "managementnet-us-vm" {
+  source           = "./instance"
+  instance_name    = "managementnet-us-vm"
+  instance_zone    = "us-central1-a"
+  instance_subnetwork = google_compute_subnetwork.managementsubnet-us.self_link
+}
