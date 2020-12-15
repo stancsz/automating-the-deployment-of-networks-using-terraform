@@ -9,6 +9,7 @@ wget -O - https://raw.githubusercontent.com/stancsz/sre-devops-practice/master/l
 ```bash
 wget -O - https://raw.githubusercontent.com/stancsz/sre-devops-practice/master/mysql-setup/mysql-db-setup.sh | bash
 ```
+after installation finishes
 ```
 # Extra Instructions
 ### Comment out **** bind-address = 127.0.0.1 **** by using
@@ -17,11 +18,9 @@ vi /etc/mysql/mysql.conf.d/mysqld.cnf
 vi /etc/mysql/my.cnf
 
 # Create users:
-sudo mysql --execute=CREATE USER 'admin01'@'localhost' IDENTIFIED BY 'adminpassw0rd';
-sudo mysql --execute=GRANT ALL PRIVILEGES ON *.* TO 'admin01'@'localhost' WITH GRANT OPTION;
-sudo mysql --execute=CREATE USER 'admin01'@'%' IDENTIFIED BY 'adminpassw0rd';
-sudo mysql --execute=GRANT ALL PRIVILEGES ON *.* TO 'admin01'@'%' WITH GRANT OPTION;
+sudo mysql --execute="CREATE USER 'admin01'@'localhost' IDENTIFIED BY 'adminpassw0rd';"
+sudo mysql --execute="GRANT ALL PRIVILEGES ON *.* TO 'admin01'@'localhost' WITH GRANT OPTION;"
+sudo mysql --execute="CREATE USER 'admin01'@'%' IDENTIFIED BY 'adminpassw0rd';"
+sudo mysql --execute="GRANT ALL PRIVILEGES ON *.* TO 'admin01'@'%' WITH GRANT OPTION;"
 ```
-
-
 [howto](https://askubuntu.com/questions/992448/how-to-execute-a-bash-script-from-github)
