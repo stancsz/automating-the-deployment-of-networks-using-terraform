@@ -1,13 +1,13 @@
 # SILO Quick Starts
 ## setup swapfile 4GB
 ```bash
-wget -O - https://raw.githubusercontent.com/stancsz/sre-devops-practice/master/linux-create-swapfile/create-linux-swapfile.sh | bash
+wget -O - https://raw.githubusercontent.com/stancsz/sre-devops-practice/master/create-linux-swapfile/create-linux-swapfile.sh | bash
 ```
 
 
 ## mysql setup
 ```bash
-wget -O - https://raw.githubusercontent.com/stancsz/sre-devops-practice/master/mysql-setup/mysql-db-setup.sh | bash
+wget -O - https://raw.githubusercontent.com/stancsz/sre-devops-practice/master/mysql-setup/mysql-setup.sh | bash
 ```
 after installation finishes
 ```
