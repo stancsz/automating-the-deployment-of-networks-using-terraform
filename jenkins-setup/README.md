@@ -258,4 +258,35 @@ See the list of available environment variables
 >
 > ##### Extra setup guide
 >
-> [guru99 source
+> [guru99 source]
+
+
+# Login to jenkins if forgot password
+```
+sudo vi /var/lib/jenkins/config.xml
+```
+
+change useSecurity to `false`
+```
+  <useSecurity>false</useSecurity>
+```
+then
+```
+sudo systemctl restart jenkins
+```
+[reference](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-reset-jenkins-admin-users-password/)
+
+```
+To reset admin’s password, do the following.
+
+Click on People on the left-hand navigation menu.
+Click on the Admin.
+Delete the user account.
+Navigate to Jenkins / Manage Jenkins.
+Click on Configure Global Security
+Check the Enable Security check box
+Under Security Realm, select Jenkins’ own user database
+In the Authorization section, select Logged-in users can do anything.
+Unselect Allow anonymous read access.
+Click Save to save your changes.
+```
